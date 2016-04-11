@@ -1,0 +1,47 @@
+\section*{1.a Questão}
+\label{sec:q1}
+
+Duas seqüências finitas $x[n]$ e $h[n]$, cada uma com $N_x$ e $N_h$ amostras
+repectivamente, podem ter sua soma de convolução implementada
+computationalmente através de uma multiplicação matrix-vetor. Se as amostras de
+$y[n]$, onde $y[n]$ $=$ $x[n] \ast h[n]$, e $x[n]$ são ordenadas como elementos dos
+vetores {\bf $y$} e {\bf $x$} respectivamente, então temos:
+$$
+{\bf y} = {\bf H}{\bf x}
+$$
+onde os deslocamentos $h[n - k]$ para $n = 0, \ldots, N_h - 1$ são organizados nas
+linhas da matriz {\bf $H$}. Essa matriz possui uma estrutura bastante interessante, e
+é conhecida como matriz \emph{Toeplitz}. Para investigar as características deste tipo
+de matriz, considere as seguintes seqüências:
+$$
+x[n] = {1,2,3,4,5} \quad e \quad h[n] = {6,7,8,9}
+$$
+Considere que os elementos iniciais de cada seqüência estão no instante $n$ $ =$ $0$.
+
+\begin{enumerate}[a.]
+\item Determine analiticamente a soma de convolução $y[n]$ $=$ $x[n] \ast h[n]$
+\item Escreva $x[n]$ como um vetor coluna $5 \times 1$, e $y[n]$ também como um
+  vetore coluna  $8 \times 1$. Agora determine a matriz {\bf $H$}, $8 \times 5$, de
+  forma que {\bf y} = {\bf H}{\bf x}.
+\item O que pode ser dito a respeito da primeira linha e da primeira coluna de
+  {\bf H}? O Matlab possui uma rotina chamada \emph{toeplitz} que gera uma
+  matriz \emph{Toeplitz} dada a primeira linha e primeira coluna.
+\item Utilizando esta função e a resposta do ítem d, escreva outra função que realize
+  a convolução de duas seqüências finitas quaisquer, cujo formato seja:
+
+  \vspace*{0.5cm}
+
+  function [y,h] conv\_tp(h,x) \\
+  \% Linear Convolution using Toeplitz Matrix \\
+  \% y = output sequence in column vector form \\ 
+  \% H = Toeplitz matrix  corresponding to sequence h so that y = Hx \\
+  \% h = Impulse response sequence in column vector form \\
+  \% x = input sequence in column vector form 
+
+  \item Verifique a implementação do seu código com as seqüências $x[n]$ e $h[n]$.
+\end{enumerate}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

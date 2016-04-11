@@ -1,0 +1,27 @@
+\section*{2.a Questão}
+\label{sec:q2}
+
+Um sistema linear, causal e invariante no tempo é descrito pela seguinte equação 
+diferença:
+$$
+y[n] - \dfrac{1}{2}y[n - 1] + \dfrac{1}{4}y[n - 2] = x[n] + 2x[n - 1] + x[n - 3]
+$$
+
+\begin{enumerate}
+  \item Desenvolva um algoritmo recursivo para calcular a resposta ao impulso do
+    sistema, para $0 \leq n \leq 100$, e plote-a utilizando a função do Matlab
+    \emph{stem}.
+  \item Faça o mesmo que o ítem anterior, porém agora utilizando a função
+    \emph{filter} do Matlab.
+  \item Determine se o sistema é estável ou não analisando a resposta ao impulso.
+    Explique o porquê.
+  \item Se a entrada do sistema for a seqüência
+    $x[n]$ $=$ $\{5 + 3\cos(0.2\pi n) + 4\sin(0.6\pi n)\} u[n]$, determine a saída $y[n]$
+    para $0 \leq n \leq 200$ utilizando sua solução recursiva e compare-a com o
+    resultado obtido utilizando a função filter.
+\end{enumerate}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

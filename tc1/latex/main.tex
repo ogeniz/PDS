@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[OT1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb,calc,enumerate}
+%\usepackage[cdot,squaren,Gray]{SIunits}
+%\usepackage[usenames,dvipsnames,svgnames,table,x11names]{xcolor}
+%\usepackage[dvips]{graphicx}
+%\usepackage[brazil]{varioref}
+%\usepackage{pstricks-add,subfig,caption,url,verbatim,textcomp}
+%\usepackage[framed, numbered, autolinebreaks, useliterate]{mcode}
+% Setup pages
+\setlength{\hoffset}{-2cm}
+\setlength{\voffset}{-2.5cm}
+\setlength{\textheight}{26.0cm}
+\setlength{\textwidth}{16.0cm}
+\pagestyle{empty}
+%
+\hyphenation{}
+%
+\newtheorem{defin}{Definition}[section]
+\newtheorem{teorema}{Theorem}[section]
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\ast$}
+%\graphicspath{{figures/}}
+%\DeclareGraphicsExtensions{.eps}
+%%\listfiles
+%
+\begin{document}
+{\rm  
+  \include{src/q1}
+  \include{src/q2}
+}
+%
+% \bibliographystyle{ieeetr}
+% \bibliography{refpld}
+% \addcontentsline{toc}{section}{Referências Bibliograficas}
+%
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
